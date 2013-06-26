@@ -2,7 +2,7 @@
 # ey recipes upload -e production_bigger
 # ey recipes apply -e production_bigger
 utility_name = 'memcached'
-memory_usage = 3072 # MB
+memory_usage = 2560 # MB
 memcached_version = '1.4.5'
 
 # service
