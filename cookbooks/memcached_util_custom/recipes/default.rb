@@ -1,6 +1,8 @@
-# change these to suit your needs
+# cd Dropbox/ey-cloud-recipes
 # ey recipes upload -e production_bigger
 # ey recipes apply -e production_bigger
+# cd Dropbox/rails/konimboil
+# ey web restart
 utility_name = 'memcached'
 memory_usage = 2560 # MB
 memcached_version = '1.4.5'
