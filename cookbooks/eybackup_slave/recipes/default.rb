@@ -50,7 +50,7 @@ if db_slave
       day "*"
       month "*"
       weekday "*"
-      command >> backup_command
+      command backup_command
     end  
   end
 else
