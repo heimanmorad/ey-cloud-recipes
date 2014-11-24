@@ -3,8 +3,8 @@
 # ey recipes apply -e production_bigger
 # cd Dropbox/rails/konimboil
 # ey web restart
-utility_name = 'memcached'
-memory_usage = 2560 # MB
+utility_name = 'memcached_large'
+memory_usage = 6560 # MB
 memcached_version = '1.4.5'
 
 # service
