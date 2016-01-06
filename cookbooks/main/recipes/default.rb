@@ -32,6 +32,10 @@ include_recipe "eybackup_slave"
 #uncomment to run the ssmtp recipe
 #include_recipe "ssmtp"
 
+#uncomment to add specified cron jobs for application user (deploy)
+# You must add your cron jobs to cron/attributes/cron.rb
+require_recipe "cron"
+
 #uncomment to run the sunspot recipe
 # include_recipe "sunspot"
 
