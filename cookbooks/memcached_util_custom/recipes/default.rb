@@ -1,3 +1,4 @@
+# memcached-tool 10.96.25.123:11211 stats | grep bytes
 # cd Dropbox/ey-cloud-recipes
 # ey recipes upload -e production_bigger
 # ey recipes apply -e production_bigger
