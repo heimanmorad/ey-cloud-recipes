@@ -48,7 +48,7 @@ if host
     package "net-misc/memcached" do
       action :install
       version memcached_version
-      #notifies :restart, resources(:service => "memcached"), :delayed
+      notifies :restart, resources(:service => "memcached"), :delayed
     end
   
     # conf
@@ -62,7 +62,7 @@ if host
       variables({
         :memory_usage => memory_usage
       })
-      #notifies :restart, resources(:service => "memcached"), :delayed
+      notifies :restart, resources(:service => "memcached"), :delayed
     end
     
     # monit
