@@ -6,7 +6,7 @@
 # ey web restart
 utility_name = 'memcached1'
 memory_usage = 5250 # MB
-memcached_version = '1.4.5' # this version is important - 1.4.5 has bug and will not get more than 64Mb in memory
+memcached_version = '1.4.5'
 
 # service
 service "memcached" do
