@@ -17,24 +17,24 @@ end
 host = node['utility_instances'].find{|i| i['name'].eql?(utility_name)}
 
 if host
-#  # app, solo, utility
-#  if %w[app app_master util solo].include?(node[:instance_role])
-#    node[:applications].each do |app_name, data|
-#      # write memcached.yml
-#      template "/data/#{app_name}/shared/config/memcached.yml" do
-#        owner node[:owner_name]
-#        group node[:owner_name]
-#        mode 0644
-#        source "memcached.yml.erb"
-#        backup false
-#        variables({
-#          :app_name => app_name,
-#          :host => host['hostname'],
-#          :memory_usage => memory_usage
-#        })
-#      end
-#    end
-#  end
+  # app, solo, utility
+  if %w[app app_master util solo].include?(node[:instance_role])
+    node[:applications].each do |app_name, data|
+      # write memcached.yml
+      template "/data/#{app_name}/shared/config/memcached.yml" do
+        owner node[:owner_name]
+        group node[:owner_name]
+        mode 0644
+        source "memcached.yml.erb"
+        backup false
+        variables({
+          :app_name => app_name,
+          :host => host['hostname'],
+          :memory_usage => memory_usage
+        })
+      end
+    end
+  end
   
   # utility instance
   if node[:instance_role] == 'util' && node[:name] == utility_name
