@@ -1,6 +1,5 @@
-#require_recipe "memcached_util_custom" 
-#require_recipe "memcached_util_custom_warm"
 require_recipe "memcached_1"
+require_recipe "memcached_2"
 
 #execute "testing" do
 #  command %Q{
